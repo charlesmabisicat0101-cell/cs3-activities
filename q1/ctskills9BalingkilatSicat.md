@@ -31,41 +31,4 @@
 
 ### Step 4: Pseudocode for the Transaction and Inventory Sub-Problem
 
-# Initialize available inventory and prices
-menu_items = {"Rice": 50.00, "Chicken Adobo": 75.00, "Bottled Water": 20.00}
-stock_counts = {"Rice": 100, "Chicken Adobo": 80, "Bottled Water": 50}
 
-print("=== PSHS CANTEEN SYSTEM ===")
-print("Menu:")
-for item, price in menu_items.items():
-    print(f"- {item}: Php {price:.2f} (Stock: {stock_counts[item]})")
-
-# Input order from student
-ordered_item = input("\nEnter item ordered: ").strip()
-
-if ordered_item in menu_items:
-    try:
-        quantity = int(input("Enter quantity: "))
-
-        # Check stock availability
-        if stock_counts[ordered_item] >= quantity:
-            total_cost = menu_items[ordered_item] * quantity
-            print(f"Total Cost: Php {total_cost:.2f}")
-
-            cash_given = float(input("Enter cash given by student: "))
-            
-            if cash_given >= total_cost:
-                change = cash_given - total_cost
-                stock_counts[ordered_item] -= quantity
-                
-                print("\n[TRANSACTION SUCCESSFUL]")
-                print(f"Your change is: Php {change:.2f}")
-                print(f"Remaining stock for {ordered_item}: {stock_counts[ordered_item]}")
-            else:
-                print("\n[ERROR]: Insufficient cash provided.")
-        else:
-            print("\n[ERROR]: Item is out of stock or requested quantity exceeds available stock.")
-    except ValueError:
-        print("\n[ERROR]: Invalid number entered for quantity or cash.")
-else:
-    print("\n[ERROR]: Item does not exist on the menu.")
