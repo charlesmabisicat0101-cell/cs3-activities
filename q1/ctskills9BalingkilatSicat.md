@@ -31,39 +31,41 @@
 
 ### Step 4: Pseudocode for the Transaction and Inventory Sub-Problem
 
-```text
-BEGIN CanteenTransaction
-    // Initialize available inventory and prices
-    Set menu_items = {"Rice": 50.00, "Chicken Adobo": 75.00, "Bottled Water": 20.00}
-    Set stock_counts = {"Rice": 100, "Chicken Adobo": 80, "Bottled Water": 50}
+# Initialize available inventory and prices
+menu_items = {"Rice": 50.00, "Chicken Adobo": 75.00, "Bottled Water": 20.00}
+stock_counts = {"Rice": 100, "Chicken Adobo": 80, "Bottled Water": 50}
 
-    // Input order from student
-    Print "Enter item ordered:"
-    Read ordered_item
-    Print "Enter quantity:"
-    Read quantity
+print("=== PSHS CANTEEN SYSTEM ===")
+print("Menu:")
+for item, price in menu_items.items():
+    print(f"- {item}: Php {price:.2f} (Stock: {stock_counts[item]})")
 
-    // Check stock availability
-    IF stock_counts[ordered_item] >= quantity THEN
-        // Calculate total cost
-        Set total_cost = menu_items[ordered_item] * quantity
-        Print "Total Cost: ", total_cost
+# Input order from student
+ordered_item = input("\nEnter item ordered: ").strip()
 
-        // Process payment
-        Print "Enter cash given by student:"
-        Read cash_given
-        
-        IF cash_given >= total_cost THEN
-            Set change = cash_given - total_cost
-            // Update inventory
-            Set stock_counts[ordered_item] = stock_counts[ordered_item] - quantity
+if ordered_item in menu_items:
+    try:
+        quantity = int(input("Enter quantity: "))
+
+        # Check stock availability
+        if stock_counts[ordered_item] >= quantity:
+            total_cost = menu_items[ordered_item] * quantity
+            print(f"Total Cost: Php {total_cost:.2f}")
+
+            cash_given = float(input("Enter cash given by student: "))
             
-            Print "Transaction Successful. Your change is: ", change
-            Print "Remaining stock for ", ordered_item, " is: ", stock_counts[ordered_item]
-        ELSE
-            Print "Error: Insufficient cash provided."
-        END IF
-    ELSE
-        Print "Error: Item is out of stock or requested quantity exceeds available stock."
-    END IF
-END CanteenTransaction
+            if cash_given >= total_cost:
+                change = cash_given - total_cost
+                stock_counts[ordered_item] -= quantity
+                
+                print("\n[TRANSACTION SUCCESSFUL]")
+                print(f"Your change is: Php {change:.2f}")
+                print(f"Remaining stock for {ordered_item}: {stock_counts[ordered_item]}")
+            else:
+                print("\n[ERROR]: Insufficient cash provided.")
+        else:
+            print("\n[ERROR]: Item is out of stock or requested quantity exceeds available stock.")
+    except ValueError:
+        print("\n[ERROR]: Invalid number entered for quantity or cash.")
+else:
+    print("\n[ERROR]: Item does not exist on the menu.")
