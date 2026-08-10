@@ -1,7 +1,7 @@
 # SG2 Activity 1: Computational Thinking Exercise
 
 * **Student Name:** Charles Mabi P. Sicat
-* **Section:** 8-Ilang-Ilang
+* **Section:** 9 Balingkilat
 
 ## Computational Thinking Concepts Applied in CS
 
