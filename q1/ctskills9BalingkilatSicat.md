@@ -1,34 +1,36 @@
-# SG2 Activity 1: Computational Thinking Exercise
-
-* **Student Name:** Charles Mabi P. Sicat
-* **Section:** 9 Balingkilat
-
-## Scenario Analysis: PSHS School Canteen
-
-### Step 1: Identify the Big Problem
-* *Main Problem:* The PSHS school canteen is small and frequently gets crowded during lunch breaks because ordering is slow due to students taking too long to decide, manual calculations and change giving by cashiers, and a lack of real-time inventory tracking for running-out items.
-
----
-
-### Step 2: Identify Three to Four Sub-Problems
-1. *Ordering Inefficiency:* Students take too long to decide what to order while at the front of the line.
-2. *Manual Calculation Delays:* The cashier has to manually calculate transaction totals and compute customer change.
-3. *Inventory Tracking Deficit:* There is no automated system to track which food items are running low or out of stock.
-4. *Queue Congestion:* The physical line lacks a structured pre-ordering mechanism to streamline traffic flow.
-
----
-
-### Step 3: Define Computational Thinking Approaches
-
-| Sub-Problem | CT Skill | Example Solution |
+# SG2 - Activity 1: Computational Thinking Exercise
+#14 SICAT, Charles Mabi P. | 9-Balingkilat 
+## Scenario: PSHS School Canteen
+### Step 1 : Identifying The Big Problem
+Main Problem: The small size of the PSHS canteen causes frequent crowding and delays during student's lunch breaks. These are mainly caused due to:
+- Students not being able to decide on their order, often causing more delay time
+- Having to do manual calculations of the total price of items and change
+- No inventory tracking
+### Step 2: Identifying Three to Four Sub-Problems
+#### 1. Slow Ordering
+- Students in the front of the line takes too much time to decide on what to order.
+#### 2. Manual Calculations
+- Cashiers have to calculate the total item price and their respective changes manually, which takes some additional time.
+#### 3. No Proper Inventory Tracking
+- There is no system that tracks the stock of items.
+#### 4. Massive Queues
+- The line where students go through lacks a pre-ordering mechanism to speed up the process, making the line even longer.
+### Step 3: Applying Computational Thinking Skills
+| **Sub-Problem** | **CT Skill** | **Example Solution** |
 | :--- | :--- | :--- |
-| *1. Ordering Inefficiency* | *Abstraction* | Create a digital menu interface that hides complex backend data and displays only essential item descriptions and prices clearly. |
-| *2. Manual Calculations* | *Algorithm Design* | Develop a software script that accepts item quantities, automatically computes the total cost, and calculates exact change. |
-| *3. Inventory Tracking* | *Data Representation* | Use structured dictionaries or JSON files to store and dynamically update available food stock counts with every completed sale. |
-| *4. Queue Congestion* | *Decomposition* | Break the ordering process into distinct phases: pre-ordering, digital payment processing, and counter pickup notification. |
-
----
-
-### Step 4: Pseudocode for the Transaction and Inventory Sub-Problem
-
-
+| 1. Slow Ordering | Abstraction | Create a digital menu that clearly displays the names, pictures, and the prices. |
+| 2. Manual Calculations | Algorithm Design | Develop software that accepts item quantities, automatically computes the total cost, and calculates exact change. |
+| 3. No Proper Inventory Tracking  | Algorithm Design | Develop another software that works with SP#2. It tracks the stock of each item and changes every time items were computed in SP#2  . |
+| 4. Massive Queues | Decomposition | Break the ordering process into distinct phases: pre-ordering, paying, and when to pick up the food. |
+### Step 4: Draw a flowchart or write a pseudocode for the identified sub-problem
+#### Identified Sub-problem: SP#2: Manual Calculations
+1. START PROGRAM
+2. Set variables for the price of each item
+3. Input the item to buy
+4. Input amount of items to buy
+5. Return to step 3 and 4 if customer wants more items
+6. Input the cash of the customer
+7. Multiply the amount of items to buy, to the price of said item. Do this for all different items bought and add them
+8. Find the difference of the cash of the customer (step 6) and the price (step 7) to get the change
+9. Display the process
+10. END PROGRAM
