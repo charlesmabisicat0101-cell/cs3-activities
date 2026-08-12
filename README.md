@@ -8,4 +8,5 @@
   ### Activities Included
   * **SG1 Activity 1 Part B:** Individual Github Acccount creation and Markdown experimentations.
   * **SG2 Activity 1** Computational thinking exercise located inside 'q1/' folder.
+    
 https://github.com/charlesmabisicat0101-cell/cs3-activities/blob/ad33c24e43d0a4e00d868661c50ec6d45162c9d0/q1/ctskills9BalingkilatSicat.md
