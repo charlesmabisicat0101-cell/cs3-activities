@@ -1,5 +1,5 @@
 # SG2 - Activity 1: Computational Thinking Exercise
-#14 SICAT, Charles Mabi P. | 9-Balingkilat 
+#13 RIVERA, Chester Gabriel #14 SICAT, Charles Mabi #15 SULIGUIN, Jose Santiago | 9-Balingkilat 
 ## Scenario: PSHS School Canteen
 ### Step 1 : Identifying The Big Problem
 Main Problem: The small size of the PSHS canteen causes frequent crowding and delays during student's lunch breaks. These are mainly caused due to:
