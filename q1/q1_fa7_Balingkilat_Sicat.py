@@ -1,17 +1,21 @@
 class Glassware:
-    def __init__(self, capacity_ml: float = 250.0):
-        self.capacity_ml = capacity_ml
+    def __init__(self, glassware):
+        self.glassware = glassware
 
 
 class Beaker(Glassware):
-    pass
+    def __init__(self, glassware, beaker):
+        super().__init__(glassware)
+        self.beaker = beaker
 
 
 class Tray:
-    def __init__(self):1
-        self.beakers = [Beaker() for _ in range(5)]
+    def __init__(self, tray):
+        self.tray = tray
+        self.container = [Beaker("Glassware", f"Glass Beaker{i}") for i in range (1, 6)]
 
-if __name__ == "__main__":
-    tray = Tray()
-    print(f"Tray created with {len(tray.beakers)} beakers.")
-    del tray
+Ray_Tray = Tray("Ray_Tray")
+
+for Glass_Beaker in Ray_Tray.container:
+    print(Glass_Beaker.beaker)
+    print()
